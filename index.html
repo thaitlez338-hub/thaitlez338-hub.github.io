@@ -2,125 +2,126 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fashion Store</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ร้านขายเครื่องดนตรี</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: #fafafa;
-      color: #333;
+      background: #f3f4f6;
     }
-
     header {
-      background: #000;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .hero {
-      padding: 60px 20px;
-      text-align: center;
-      background: url('https://images.unsplash.com/photo-1521334884684-d80222895322') center/cover;
+      background: #111827;
       color: white;
+      padding: 1.5rem;
+      text-align: center;
     }
-
-    .hero h1 {
-      font-size: 42px;
+    nav {
+      background: #1f2933;
+      padding: 0.8rem;
+      text-align: center;
     }
-
-    .products {
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: auto;
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      padding: 30px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
-
     .product {
       background: white;
-      border-radius: 10px;
+      border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      overflow: hidden;
+      padding: 20px;
       text-align: center;
     }
-
     .product img {
       width: 100%;
-      height: 300px;
+      height: 180px;
       object-fit: cover;
+      border-radius: 8px;
     }
-
     .product h3 {
       margin: 15px 0 5px;
     }
-
     .price {
-      color: #e91e63;
+      color: #dc2626;
       font-size: 18px;
+      font-weight: bold;
       margin-bottom: 10px;
     }
-
-    .btn {
-      display: inline-block;
-      margin-bottom: 20px;
-      padding: 10px 20px;
-      background: black;
+    button {
+      background: #2563eb;
       color: white;
-      text-decoration: none;
-      border-radius: 20px;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
     }
-
+    button:hover {
+      background: #1d4ed8;
+    }
     footer {
-      background: #111;
-      color: #ccc;
+      background: #e5e7eb;
       text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+      padding: 15px;
+      margin-top: 20px;
     }
   </style>
 </head>
-
 <body>
 
 <header>
-  <h2> THAITLEZ </h2>
+  <h1>🎸 ร้านขายเครื่องดนตรี</h1>
+  <p>เบส | กีตาร์ | แอมป์ คุณภาพ</p>
 </header>
 
-<section class="hero">
-  <h1>แฟชั่นใหม่ล่าสุด</h1>
-  <p>สวย เรียบ หรู ในราคาจับต้องได้</p>
-</section>
+<nav>
+  <a href="#">หน้าแรก</a>
+  <a href="#">กีตาร์</a>
+  <a href="#">เบส</a>
+  <a href="#">แอมป์</a>
+  <a href="#">ติดต่อเรา</a>
+</nav>
 
-<section class="products">
+<div class="container">
   <div class="product">
-    <img src="https://images.unsplash.com/photo-1520975922371-a67f27f6c1ec" />
-    <h3>เดรสสีดำ</h3>
-    <div class="price">฿790</div>
-    <a class="btn" href="https://www.facebook.com/share/16zZoKUGb5/?mibextid=wwXIfr">สั่งซื้อ</a>
+    <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1" alt="Guitar" />
+    <h3>กีตาร์ไฟฟ้า</h3>
+    <p class="price">฿12,900</p>
+    <button onclick="buy('กีตาร์ไฟฟ้า')">สั่งซื้อ</button>
   </div>
 
   <div class="product">
-    <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb" />
-    <h3>เสื้อแฟชั่น</h3>
-    <div class="price">฿590</div>
-    <a class="btn" href="https://www.facebook.com/share/16zZoKUGb5/?mibextid=wwXIfr">สั่งซื้อ</a>
+    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d" alt="Bass" />
+    <h3>เบสไฟฟ้า</h3>
+    <p class="price">฿14,500</p>
+    <button onclick="buy('เบสไฟฟ้า')">สั่งซื้อ</button>
   </div>
 
   <div class="product">
-    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" />
-    <h3>เสื้อยืด</h3>
-    <div class="price">฿390</div>
-    <a class="btn" href="https://www.facebook.com/share/16zZoKUGb5/?mibextid=wwXIfr">สั่งซื้อ</a>
+    <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0" alt="Amp" />
+    <h3>แอมป์กีตาร์</h3>
+    <p class="price">฿8,900</p>
+    <button onclick="buy('แอมป์กีตาร์')">สั่งซื้อ</button>
   </div>
-</section>
+</div>
 
 <footer>
-  <p>ติดต่อเรา | LINE : @Olieng1688 | IG : THAITLEZ_IG2</p>
+  <p>📞 ติดต่อ: 08x-xxx-xxxx | LINE: @musicshop</p>
+  <p>© 2026 ร้านขายเครื่องดนตรี</p>
 </footer>
+
+<script>
+  function buy(product) {
+    alert('คุณเลือกซื้อ: ' + product);
+  }
+</script>
 
 </body>
 </html>
